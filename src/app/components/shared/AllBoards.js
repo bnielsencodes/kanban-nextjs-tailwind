@@ -33,6 +33,10 @@ export default function AllBoards(props) {
         </svg>
         <button
           className="h-[16px] text-primary font-semibold leading-[19px] cursor-pointer"
+          onClick={() => {
+            props.setShowBoardsModal((prevState) => !prevState);
+            props.setShowAddBoardModal(true);
+          }}
         >
           + Create New Board
         </button>
