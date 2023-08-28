@@ -8,6 +8,7 @@ import AddBoardModal from "./components/shared/AddBoardModal";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [showAddBoardModal, setShowAddBoardModal] = useState(false);
+  const [boardCount, setBoardCount] = useState(0);
   const [currentTaskboard, setCurrentTaskboard] = useState(data[0].name);
 
   useEffect(() => {
@@ -48,6 +49,8 @@ export default function Home() {
         {showAddBoardModal && (
           <AddBoardModal
             darkMode={darkMode}
+            boardCount={boardCount}
+            setBoardCount={setBoardCount}
             setShowAddBoardModal={setShowAddBoardModal}
           />
         )}
