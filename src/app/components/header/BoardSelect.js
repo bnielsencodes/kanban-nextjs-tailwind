@@ -56,6 +56,7 @@ export default function BoardSelect(props) {
         toggleTheme={props.toggleTheme}
         showBoardsModal={showBoardsModal}
         setShowBoardsModal={setShowBoardsModal}
+        setShowAddBoardModal={props.setShowAddBoardModal}
         currentTaskboard={props.currentTaskboard}
         setCurrentTaskboard={props.setCurrentTaskboard}
       />

@@ -5,6 +5,7 @@ import AddBoardModal from "./components/shared/AddBoardModal";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [showAddBoardModal, setShowAddBoardModal] = useState(false);
   const [currentTaskboard, setCurrentTaskboard] = useState(data[0].name);
 
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function Home() {
       <Header
         darkMode={darkMode}
         toggleTheme={toggleTheme}
+        setShowAddBoardModal={setShowAddBoardModal}
         currentTaskboard={currentTaskboard}
         setCurrentTaskboard={setCurrentTaskboard}
       />

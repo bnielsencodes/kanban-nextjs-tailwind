@@ -22,6 +22,7 @@ export default function BoardsModal(props) {
       >
         <AllBoards
           setShowBoardsModal={props.setShowBoardsModal}
+          setShowAddBoardModal={props.setShowAddBoardModal}
           currentTaskboard={props.currentTaskboard}
           setCurrentTaskboard={props.setCurrentTaskboard}
         />
