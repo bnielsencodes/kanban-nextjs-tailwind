@@ -11,6 +11,8 @@ export default function Header(props) {
       <HeaderLeft
         darkMode={props.darkMode}
         toggleTheme={props.toggleTheme}
+        currentTaskboard={props.currentTaskboard}
+        setCurrentTaskboard={props.setCurrentTaskboard}
       />
       <HeaderRight />
     </div>

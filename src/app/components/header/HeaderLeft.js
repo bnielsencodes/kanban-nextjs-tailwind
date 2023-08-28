@@ -16,6 +16,8 @@ export default function HeaderLeft(props) {
       <BoardSelect
         darkMode={props.darkMode}
         toggleTheme={props.toggleTheme}
+        currentTaskboard={props.currentTaskboard}
+        setCurrentTaskboard={props.setCurrentTaskboard}
       />
     </div>
   );

@@ -10,6 +10,8 @@ export default function BoardsModal(props) {
       >
         <AllBoards
           setShowBoardsModal={props.setShowBoardsModal}
+          currentTaskboard={props.currentTaskboard}
+          setCurrentTaskboard={props.setCurrentTaskboard}
         />
         <LightDarkToggle
           darkMode={props.darkMode}

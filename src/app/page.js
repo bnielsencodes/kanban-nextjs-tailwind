@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [currentTaskboard, setCurrentTaskboard] = useState(data[0].name);
 
   useEffect(() => {
     const prefersDark = window.matchMedia(
@@ -26,6 +27,8 @@ export default function Home() {
       <Header
         darkMode={darkMode}
         toggleTheme={toggleTheme}
+        currentTaskboard={currentTaskboard}
+        setCurrentTaskboard={setCurrentTaskboard}
       />
       <main
       </main>
