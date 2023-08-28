@@ -1,9 +1,24 @@
+import data from "../../data";
+import BoardsList from "./BoardsList";
+
 export default function AllBoards(props) {
+  const boardsListElements = data.map((board) => {
+    return (
+      <BoardsList
+        key={board.id}
+        board={board}
+        currentTaskboard={props.currentTaskboard}
+        setCurrentTaskboard={props.setCurrentTaskboard}
+      />
+    );
+  });
+
   return (
     <div>
       <p className="pl-6 text-neutral-500 text-xs font-semibold leading-[15px] tracking-[2.4px] uppercase">
         All Boards ({data.length})
       </p>
+      <ul className="mt-[18px] mb-[14px]">{boardsListElements}</ul>
       <div className="flex items-center pl-6 mb-[34px]">
         <svg
           className="mr-3"
