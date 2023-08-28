@@ -1,3 +1,5 @@
+import AllBoards from "../shared/AllBoards";
+
 export default function BoardsModal(props) {
   return (
     <div
@@ -5,6 +7,8 @@ export default function BoardsModal(props) {
       <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
       <div
       >
+        <AllBoards
+        />
       </div>
     </div>
   );
