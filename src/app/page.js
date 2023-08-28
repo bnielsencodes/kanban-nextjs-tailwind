@@ -45,6 +45,12 @@ export default function Home() {
         ) : (
           <EmptyBoard setShowAddBoardModal={setShowAddBoardModal} />
         )}
+        {showAddBoardModal && (
+          <AddBoardModal
+            darkMode={darkMode}
+            setShowAddBoardModal={setShowAddBoardModal}
+          />
+        )}
       </main>
     </div>
   );
