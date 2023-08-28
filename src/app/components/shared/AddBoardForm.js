@@ -1,3 +1,5 @@
+import NewColumnsList from "./NewColumnsList";
+
 export default function AddBoardForm(props) {
   return (
     <form className="flex flex-col">
