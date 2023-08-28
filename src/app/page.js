@@ -34,6 +34,10 @@ export default function Home() {
         setCurrentTaskboard={setCurrentTaskboard}
       />
       <main
+        className={`main h-screen ${
+          darkMode ? "bg-neutral-200" : "bg-neutral-700"
+        }`}
+      >
       </main>
     </div>
   );
