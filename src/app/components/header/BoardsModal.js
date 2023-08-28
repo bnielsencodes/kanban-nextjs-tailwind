@@ -9,6 +9,7 @@ export default function BoardsModal(props) {
       <div
       >
         <AllBoards
+          setShowBoardsModal={props.setShowBoardsModal}
         />
         <LightDarkToggle
           darkMode={props.darkMode}

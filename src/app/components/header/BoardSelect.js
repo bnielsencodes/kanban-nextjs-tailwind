@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Image from "next/image";
 import iconChevronDown from "/public/assets/icon-chevron-down.svg";
 import BoardsModal from "./BoardsModal";
 
 export default function BoardSelect(props) {
+  const [showBoardsModal, setShowBoardsModal] = useState(false);
+
   return (
     <div className="relative flex items-center cursor-pointer group">
       <input
@@ -29,6 +32,8 @@ export default function BoardSelect(props) {
       <BoardsModal
         darkMode={props.darkMode}
         toggleTheme={props.toggleTheme}
+        showBoardsModal={showBoardsModal}
+        setShowBoardsModal={setShowBoardsModal}
       />
     </div>
   );
