@@ -1,3 +1,5 @@
+import AddBoardForm from "./AddBoardForm";
+
 export default function AddBoardModal(props) {
   return (
     <div className="absolute top-16 left-0 z-10 w-screen h-screen select-none">
@@ -7,6 +9,12 @@ export default function AddBoardModal(props) {
           props.darkMode ? "bg-neutral-300" : "bg-neutral-800"
         } select-none`}
       >
+        <AddBoardForm
+          darkMode={props.darkMode}
+          boardCount={props.boardCount}
+          setBoardCount={props.setBoardCount}
+          setShowAddBoardModal={props.setShowAddBoardModal}
+        />
       </div>
     </div>
   );
