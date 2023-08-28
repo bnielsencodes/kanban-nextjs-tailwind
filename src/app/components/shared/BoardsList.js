@@ -27,6 +27,7 @@ export default function BoardsList(props) {
               ? "text-neutral-800"
               : "text-neutral-500"
           } font-semibold leading-[19px] cursor-pointer`}
+          onClick={() => props.setCurrentTaskboard(props.board.name)}
         >
           {props.board.name}
         </p>
