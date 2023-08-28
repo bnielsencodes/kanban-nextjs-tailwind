@@ -8,6 +8,29 @@ export default function AddBoardForm(props) {
       >
         Add New Board
       </p>
+
+      <fieldset>
+        <label
+          htmlFor="board-name"
+        >
+          Board Name
+        </label>
+        <input
+          id="board-name"
+          type="text"
+          name="name"
+          placeholder="e.g. Web Design"
+        />
+      </fieldset>
+
+      <fieldset>
+        <p
+        >
+          Board Columns
+        </p>
+        <ul>
+        </ul>
+      </fieldset>
     </form>
   );
 }
