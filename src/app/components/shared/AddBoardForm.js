@@ -3,6 +3,13 @@ import NewColumnsList from "./NewColumnsList";
 
 export default function AddBoardForm(props) {
   const [newBoardName, setNewBoardName] = useState("");
+
+  const newColumnsElements = newBoardColumns.map((item) => {
+    return (
+      <NewColumnsList key={item.id} item={item} darkMode={props.darkMode} />
+    );
+  });
+
   return (
     <form className="flex flex-col">
       <p
