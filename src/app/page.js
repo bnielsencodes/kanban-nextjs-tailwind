@@ -5,6 +5,14 @@ import Header from "./components/header/Header";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    if (prefersDark) {
+      setDarkMode(true);
+    }
+  }, []);
 
   // toggle dark mode
   function toggleTheme() {
