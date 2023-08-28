@@ -7,6 +7,7 @@ export default function Header(props) {
     >
       <HeaderLeft
         darkMode={props.darkMode}
+        toggleTheme={props.toggleTheme}
       />
       <HeaderRight />
     </div>

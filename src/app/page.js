@@ -6,6 +6,10 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
 
+  // toggle dark mode
+  function toggleTheme() {
+    setDarkMode((prevMode) => !prevMode);
+  }
 
 
   return (
@@ -13,6 +17,7 @@ export default function Home() {
     >
       <Header
         darkMode={darkMode}
+        toggleTheme={toggleTheme}
       />
       <main
       </main>

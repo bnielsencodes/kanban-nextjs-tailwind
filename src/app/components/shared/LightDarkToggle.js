@@ -20,6 +20,7 @@ export default function LightDarkToggle(props) {
         <input
           id="toggle"
           className="toggle hidden"
+          onClick={props.toggleTheme}
           type="checkbox"
           name="toggle"
         />

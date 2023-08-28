@@ -12,6 +12,7 @@ export default function BoardsModal(props) {
         />
         <LightDarkToggle
           darkMode={props.darkMode}
+          toggleTheme={props.toggleTheme}
         />
       </div>
     </div>

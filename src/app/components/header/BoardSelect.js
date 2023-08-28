@@ -19,6 +19,7 @@ export default function BoardSelect(props) {
         />
       <BoardsModal
         darkMode={props.darkMode}
+        toggleTheme={props.toggleTheme}
       />
     </div>
   );
