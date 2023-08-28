@@ -1,4 +1,5 @@
 import AllBoards from "../shared/AllBoards";
+import LightDarkToggle from "@/app/components/shared/LightDarkToggle";
 
 export default function BoardsModal(props) {
   return (
@@ -8,6 +9,8 @@ export default function BoardsModal(props) {
       <div
       >
         <AllBoards
+        />
+        <LightDarkToggle
         />
       </div>
     </div>
