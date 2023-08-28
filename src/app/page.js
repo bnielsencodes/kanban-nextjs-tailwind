@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
+import data from "./data";
 import Header from "./components/header/Header";
+import EmptyBoard from "./components/taskboard/EmptyBoard";
 import AddBoardModal from "./components/shared/AddBoardModal";
 
 export default function Home() {
@@ -38,6 +40,11 @@ export default function Home() {
           darkMode ? "bg-neutral-200" : "bg-neutral-700"
         }`}
       >
+        {data.length > 0 ? (
+          <p className="italic text-neutral-800">current taskboard</p>
+        ) : (
+          <EmptyBoard setShowAddBoardModal={setShowAddBoardModal} />
+        )}
       </main>
     </div>
   );
