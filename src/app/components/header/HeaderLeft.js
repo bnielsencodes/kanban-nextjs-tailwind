@@ -14,6 +14,7 @@ export default function HeaderLeft(props) {
         sizes="100vw"
       />
       <BoardSelect
+        darkMode={props.darkMode}
       />
     </div>
   );

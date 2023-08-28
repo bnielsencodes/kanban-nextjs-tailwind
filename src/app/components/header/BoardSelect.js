@@ -18,6 +18,7 @@ export default function BoardSelect(props) {
           sizes="100vw"
         />
       <BoardsModal
+        darkMode={props.darkMode}
       />
     </div>
   );

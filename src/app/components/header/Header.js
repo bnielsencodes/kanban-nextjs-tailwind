@@ -6,6 +6,7 @@ export default function Header(props) {
     <div
     >
       <HeaderLeft
+        darkMode={props.darkMode}
       />
       <HeaderRight />
     </div>
