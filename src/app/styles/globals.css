@@ -28,6 +28,11 @@ li {
   list-style-type: none;
 }
 
+.boards-modal {
+  transition: transform 0.3s ease-in, opacity 0.3s 0.2s ease-in,
+    color 0.5s ease-out, background-color 0.5s ease-out;
+}
+
 .inner {
   margin-left: -100%;
   transition: margin 0.3s ease-in 0s;
