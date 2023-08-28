@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Header from "./components/header/Header";
+import AddBoardModal from "./components/shared/AddBoardModal";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
