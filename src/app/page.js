@@ -27,8 +27,7 @@ export default function Home() {
 
 
   return (
-    <div
-    >
+    <div>
       <Header
         darkMode={darkMode}
         toggleTheme={toggleTheme}
