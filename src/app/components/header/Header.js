@@ -1,4 +1,5 @@
 import HeaderLeft from "./HeaderLeft";
+import HeaderRight from "./HeaderRight";
 
 export default function Header(props) {
   return (
@@ -6,6 +7,7 @@ export default function Header(props) {
     >
       <HeaderLeft
       />
+      <HeaderRight />
     </div>
   );
 }
