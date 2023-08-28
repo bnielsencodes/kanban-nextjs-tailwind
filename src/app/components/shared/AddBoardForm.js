@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import NewColumnsList from "./NewColumnsList";
 
 export default function AddBoardForm(props) {
+  const [newBoardName, setNewBoardName] = useState("");
   return (
     <form className="flex flex-col">
       <p
@@ -29,6 +31,9 @@ export default function AddBoardForm(props) {
               ? "placeholder-placeholderDark"
               : "placeholder-placeholderLight"
           }`}
+          onChange={(event) => {
+            setNewBoardName(() => event.target.value);
+          }}
           type="text"
           name="name"
           placeholder="e.g. Web Design"
