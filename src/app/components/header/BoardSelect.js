@@ -6,11 +6,20 @@ import BoardsModal from "./BoardsModal";
 export default function BoardSelect(props) {
   const [showBoardsModal, setShowBoardsModal] = useState(false);
 
+  const handleChange = (event) => {
+    if (event.target.checked) {
+      setShowBoardsModal(true);
+    } else {
+      setShowBoardsModal(false);
+    }
+  };
+
   return (
     <div className="relative flex items-center cursor-pointer group">
       <input
         id="board-select-btn"
         className="appearance-none hidden focus-visible:outline-none"
+        onChange={handleChange}
         type="checkbox"
         name="board-select"
       />
