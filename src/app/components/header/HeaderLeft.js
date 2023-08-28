@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logoMobile from "/public/assets/logo-mobile.svg";
+import BoardSelect from "./BoardSelect";
 
 export default function HeaderLeft(props) {
   return (
@@ -11,6 +12,8 @@ export default function HeaderLeft(props) {
         width="0"
         height="0"
         sizes="100vw"
+      />
+      <BoardSelect
       />
     </div>
   );
