@@ -1,5 +1,6 @@
 import Image from "next/image";
 import iconChevronDown from "/public/assets/icon-chevron-down.svg";
+import BoardsModal from "./BoardsModal";
 
 export default function BoardSelect(props) {
   return (
@@ -16,6 +17,8 @@ export default function BoardSelect(props) {
           height="0"
           sizes="100vw"
         />
+      <BoardsModal
+      />
     </div>
   );
 }
