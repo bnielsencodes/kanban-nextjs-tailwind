@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import iconChevronUp from "/public/assets/icon-chevron-up.svg";
 import iconChevronDown from "/public/assets/icon-chevron-down.svg";
 import BoardsModal from "./BoardsModal";
 
@@ -30,6 +31,7 @@ export default function BoardSelect(props) {
         htmlFor="board-select-btn"
       >
       </label>
+      {!showBoardsModal ? (
         <Image
           className="absolute top-[7px] right-0 mt-[3px] pointer-events-none"
           src={iconChevronDown}
@@ -38,6 +40,16 @@ export default function BoardSelect(props) {
           height="0"
           sizes="100vw"
         />
+      ) : (
+        <Image
+          className="absolute top-[7px] right-0 mt-[3px] pointer-events-none"
+          src={iconChevronUp}
+          alt="chevron up icon"
+          width="0"
+          height="0"
+          sizes="100vw"
+        />
+      )}
       <BoardsModal
         darkMode={props.darkMode}
         toggleTheme={props.toggleTheme}
