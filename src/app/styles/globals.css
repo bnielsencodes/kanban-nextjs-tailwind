@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 500 15px/1.5 "Plus Jakarta Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
