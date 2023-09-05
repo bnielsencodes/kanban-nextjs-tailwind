@@ -1,6 +1,7 @@
 import { useState } from "react";
 import HeaderLeft from "./HeaderLeft";
 import HeaderRight from "./HeaderRight";
+import EditDeleteBoardModal from "./EditDeleteBoardModal";
 
 export default function Header(props) {
   const [showEditDeleteBoardModal, setShowEditDeleteBoardModal] =
@@ -21,6 +22,14 @@ export default function Header(props) {
         setCurrentBoardTitle={props.setCurrentBoardTitle}
       />
       <HeaderRight />
+      {showEditDeleteBoardModal && (
+        <EditDeleteBoardModal
+          darkMode={props.darkMode}
+          showEditDeleteBoardModal={showEditDeleteBoardModal}
+          setShowEditDeleteBoardModal={setShowEditDeleteBoardModal}
+          setShowDeleteBoardModal={props.setShowDeleteBoardModal}
+        />
+      )}
     </div>
   );
 }
