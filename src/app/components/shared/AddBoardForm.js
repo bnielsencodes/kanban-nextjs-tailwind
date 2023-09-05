@@ -4,6 +4,12 @@ import NewColumnsList from "./NewColumnsList";
 export default function AddBoardForm(props) {
   const [newBoardName, setNewBoardName] = useState("");
 
+  function handleRemove(id) {
+    const newList = columnsList.filter((item) => item.id !== id);
+    setColumnsList(newList);
+  }
+
+
   const newColumnsElements = newBoardColumns.map((item) => {
     return (
       <NewColumnsList key={item.id} item={item} darkMode={props.darkMode} />
