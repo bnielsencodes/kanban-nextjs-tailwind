@@ -5,6 +5,7 @@ export default function AddBoardModal(props) {
     <div className="absolute top-0 left-0 z-10 w-screen h-screen select-none">
       <div
         className="absolute top-0 left-0 w-full h-full bg-black/40"
+        onClick={() => props.setShowAddBoardModal(false)}
       ></div>
       <div
         className={`absolute top-[calc(50%+64px)] left-1/2 z-20 w-[343px] p-6 rounded-md -translate-x-1/2 -translate-y-1/2 ${
