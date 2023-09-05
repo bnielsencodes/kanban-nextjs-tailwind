@@ -3,6 +3,12 @@ import { useState } from "react";
 export default function NewColumnInput(props) {
   const [inputValue, setInputValue] = useState("");
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    props.setColumnsInput({ ...props.columnsInput, [name]: value });
+    setInputValue(event.target.value);
+  };
+
   return (
     <>
       <li className="flex items-center justify-between mb-3">
@@ -10,6 +16,7 @@ export default function NewColumnInput(props) {
           className={`w-[calc(100%-31px)] h-[40px] pl-[16px] border border-inputBorder rounded bg-transparent ${
             props.darkMode ? "text-neutral-800" : "text-neutral-100"
           } placeholder-colorDefault`}
+          onChange={handleChange}
           type="text"
           name={`column${props.item.id}`}
           value={inputValue}
