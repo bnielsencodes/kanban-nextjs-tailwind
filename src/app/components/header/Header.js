@@ -21,7 +21,7 @@ export default function Header(props) {
         currentBoardTitle={props.currentBoardTitle}
         setCurrentBoardTitle={props.setCurrentBoardTitle}
       />
-      <HeaderRight />
+      <HeaderRight setShowEditDeleteBoardModal={setShowEditDeleteBoardModal} />
       {showEditDeleteBoardModal && (
         <EditDeleteBoardModal
           darkMode={props.darkMode}

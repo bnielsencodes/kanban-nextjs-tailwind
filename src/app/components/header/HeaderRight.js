@@ -2,7 +2,7 @@ import Image from "next/image";
 import iconAdd from "/public/assets/icon-add-task-mobile.svg";
 import iconEllipsis from "/public/assets/icon-vertical-ellipsis.svg";
 
-export default function HeaderRight() {
+export default function HeaderRight(props) {
   return (
     <div className="flex items-center">
       <button className="flex items-center justify-center w-12 h-8 border-0 rounded-2xl bg-primary opacity-25 cursor-pointer">
@@ -14,7 +14,12 @@ export default function HeaderRight() {
           sizes="100vw"
         />
       </button>
-      <button className="w-[3.692px] h-4 ml-4 cursor-pointer ">
+      <button
+        className="w-[3.692px] h-4 ml-4 cursor-pointer"
+        onClick={() => {
+          props.setShowEditDeleteBoardModal(true);
+        }}
+      >
         <Image
           src={iconEllipsis}
           alt="vertical ellipsis icon"
