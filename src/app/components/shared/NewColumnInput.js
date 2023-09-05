@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function NewColumnInput(props) {
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <>
       <li className="flex items-center justify-between mb-3">
