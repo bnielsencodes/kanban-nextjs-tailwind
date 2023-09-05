@@ -58,6 +58,19 @@ export default function AddBoardForm(props) {
         <ul>
         </ul>
       </fieldset>
+      <button
+        className={`h-[40px] rounded-[20px] mb-6 ${
+          props.darkMode ? "bg-neutral-800" : "bg-palePurpleBtn"
+        } text-primary text-[13px] font-semibold leading-[13px] cursor-pointer`}
+      >
+        + Add New Column
+      </button>
+      <button
+        className="h-[40px] rounded-[20px] bg-primary text-neutral-800 text-[13px] font-semibold leading-[13px] cursor-pointer"
+        type="submit"
+      >
+        Create New Board
+      </button>
     </form>
   );
 }
