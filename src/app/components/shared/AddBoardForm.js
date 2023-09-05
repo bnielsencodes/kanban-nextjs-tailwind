@@ -11,7 +11,7 @@ export default function AddBoardForm(props) {
   });
 
   return (
-    <form className="flex flex-col">
+    <form id="form" className="flex flex-col">
       <p
         className={`mb-[18px] ${
           props.darkMode ? "text-neutral-800" : "text-neutral-100"
