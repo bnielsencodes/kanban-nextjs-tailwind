@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import NewColumnsList from "./NewColumnsList";
+import data from "../../data";
+import NewColumnInput from "./NewColumnInput";
 
 export default function AddBoardForm(props) {
   const [columnsList, setColumnsList] = useState([]);
