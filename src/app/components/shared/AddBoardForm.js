@@ -11,6 +11,12 @@ export default function AddBoardForm(props) {
     columns: [],
   });
 
+  useEffect(() => {
+    setNewBoard({
+      ...newBoard,
+      columns: [columnsInput],
+    });
+  }, [columnsInput]);
   function handleRemove(id) {
     const newList = columnsList.filter((item) => item.id !== id);
     setColumnsList(newList);
