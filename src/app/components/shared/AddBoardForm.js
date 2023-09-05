@@ -92,6 +92,19 @@ export default function AddBoardForm(props) {
           Board Columns
         </p>
         <ul>
+          {columnsList.length < 1 ? (
+            <p
+              className={`pl-4 mb-4 ${
+                props.darkMode
+                  ? "text-placeholderDark"
+                  : "text-placeholderLight"
+              } text-xs italic`}
+            >
+              No columns
+            </p>
+          ) : (
+            newColumnsElements
+          )}
         </ul>
       </fieldset>
       <button
