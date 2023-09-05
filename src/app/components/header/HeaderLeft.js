@@ -17,8 +17,8 @@ export default function HeaderLeft(props) {
         darkMode={props.darkMode}
         toggleTheme={props.toggleTheme}
         setShowAddBoardModal={props.setShowAddBoardModal}
-        currentTaskboard={props.currentTaskboard}
-        setCurrentTaskboard={props.setCurrentTaskboard}
+        currentBoardTitle={props.currentBoardTitle}
+        setCurrentBoardTitle={props.setCurrentBoardTitle}
       />
     </div>
   );

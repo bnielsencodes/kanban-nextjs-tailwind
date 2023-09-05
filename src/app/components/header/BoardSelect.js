@@ -30,7 +30,7 @@ export default function BoardSelect(props) {
         } text-lg font-bold leading-[23px] select-none group-hover:cursor-pointer`}
         htmlFor="board-select-btn"
       >
-        {props.currentTaskboard}
+        {props.currentBoardTitle}
       </label>
       {!showBoardsModal ? (
         <Image
@@ -57,8 +57,8 @@ export default function BoardSelect(props) {
         showBoardsModal={showBoardsModal}
         setShowBoardsModal={setShowBoardsModal}
         setShowAddBoardModal={props.setShowAddBoardModal}
-        currentTaskboard={props.currentTaskboard}
-        setCurrentTaskboard={props.setCurrentTaskboard}
+        currentBoardTitle={props.currentBoardTitle}
+        setCurrentBoardTitle={props.setCurrentBoardTitle}
       />
     </div>
   );

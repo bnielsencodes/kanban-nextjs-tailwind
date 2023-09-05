@@ -7,8 +7,8 @@ export default function AllBoards(props) {
       <BoardsList
         key={board.id}
         board={board}
-        currentTaskboard={props.currentTaskboard}
-        setCurrentTaskboard={props.setCurrentTaskboard}
+        currentBoardTitle={props.currentBoardTitle}
+        setCurrentBoardTitle={props.setCurrentBoardTitle}
       />
     );
   });

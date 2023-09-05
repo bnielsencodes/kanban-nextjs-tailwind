@@ -9,7 +9,7 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [showAddBoardModal, setShowAddBoardModal] = useState(false);
   const [boardCount, setBoardCount] = useState(0);
-  const [currentTaskboard, setCurrentTaskboard] = useState(data[0].name);
+  const [currentBoardTitle, setCurrentBoardTitle] = useState(data[0].name);
 
   useEffect(() => {
     const prefersDark = window.matchMedia(
@@ -31,9 +31,9 @@ export default function Home() {
       <Header
         darkMode={darkMode}
         toggleTheme={toggleTheme}
+        currentBoardTitle={currentBoardTitle}
         setShowAddBoardModal={setShowAddBoardModal}
-        currentTaskboard={currentTaskboard}
-        setCurrentTaskboard={setCurrentTaskboard}
+        setCurrentBoardTitle={setCurrentBoardTitle}
       />
       <main
         className={`main h-screen ${

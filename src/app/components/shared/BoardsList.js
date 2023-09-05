@@ -3,7 +3,7 @@ export default function BoardsList(props) {
     <>
       <li
         className={`flex items-center w-60 h-12 pl-6 rounded-r-[100px] ${
-          props.currentTaskboard === props.board.name ? "bg-primary" : ""
+          props.currentBoardTitle === props.board.name ? "bg-primary" : ""
         }`}
       >
         <svg
@@ -14,7 +14,7 @@ export default function BoardsList(props) {
         >
           <path
             className={`${
-              props.currentTaskboard === props.board.name
+              props.currentBoardTitle === props.board.name
                 ? "fill-neutral-800"
                 : "fill-neutral-500"
             }`}
@@ -23,7 +23,7 @@ export default function BoardsList(props) {
         </svg>
         <p
           className={`h-[16px] ${
-            props.currentTaskboard === props.board.name
+            props.currentBoardTitle === props.board.name
               ? "text-neutral-800"
               : "text-neutral-500"
           } font-semibold leading-[19px] cursor-pointer`}
