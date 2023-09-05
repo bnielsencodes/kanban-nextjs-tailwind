@@ -17,6 +17,12 @@ export default function AddBoardForm(props) {
       columns: [columnsInput],
     });
   }, [columnsInput]);
+
+  // Set name property of newBoard state
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setNewBoard({ ...newBoard, [name]: value });
+  };
   function handleRemove(id) {
     const newList = columnsList.filter((item) => item.id !== id);
     setColumnsList(newList);
@@ -62,9 +68,7 @@ export default function AddBoardForm(props) {
               ? "placeholder-placeholderDark"
               : "placeholder-placeholderLight"
           }`}
-          onChange={(event) => {
-            setNewBoardName(() => event.target.value);
-          }}
+          onChange={handleChange}
           type="text"
           name="name"
           placeholder="e.g. Web Design"
