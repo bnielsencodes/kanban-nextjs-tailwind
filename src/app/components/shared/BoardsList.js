@@ -1,4 +1,11 @@
+import data from "../../data";
+
 export default function BoardsList(props) {
+  function handleClick() {
+    props.setCurrentBoard(data[props.board.id - 1]);
+    props.setCurrentBoardTitle(props.board.name);
+  }
+
   return (
     <>
       <li
@@ -27,7 +34,7 @@ export default function BoardsList(props) {
               ? "text-neutral-800"
               : "text-neutral-500"
           } font-semibold leading-[19px] cursor-pointer`}
-          onClick={() => props.setCurrentTaskboard(props.board.name)}
+          onClick={handleClick}
         >
           {props.board.name}
         </p>
