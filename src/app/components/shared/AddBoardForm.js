@@ -111,6 +111,13 @@ export default function AddBoardForm(props) {
         className={`h-[40px] rounded-[20px] mb-6 ${
           props.darkMode ? "bg-neutral-800" : "bg-palePurpleBtn"
         } text-primary text-[13px] font-semibold leading-[13px] cursor-pointer`}
+        onClick={(e) => {
+          e.preventDefault();
+          setColumnsList([
+            ...columnsList,
+            { id: `${columnsList.length + 1}`, title: "" },
+          ]);
+        }}
       >
         + Add New Column
       </button>
