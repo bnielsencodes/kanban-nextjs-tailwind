@@ -23,11 +23,17 @@ export default function AddBoardForm(props) {
     const { name, value } = event.target;
     setNewBoard({ ...newBoard, [name]: value });
   };
+
   function handleRemove(id) {
     const newList = columnsList.filter((item) => item.id !== id);
     setColumnsList(newList);
   }
 
+  function handleSubmit() {
+    data.push(newBoard);
+    props.setBoardCount(props.boardCount + 1);
+    props.setShowAddBoardModal(false);
+  }
 
   const newColumnsElements = columnsList.map((item) => {
     return (
@@ -95,6 +101,10 @@ export default function AddBoardForm(props) {
       </button>
       <button
         className="h-[40px] rounded-[20px] bg-primary text-neutral-800 text-[13px] font-semibold leading-[13px] cursor-pointer"
+        onClick={(e) => {
+          e.preventDefault();
+          handleSubmit();
+        }}
         type="submit"
       >
         Create New Board
