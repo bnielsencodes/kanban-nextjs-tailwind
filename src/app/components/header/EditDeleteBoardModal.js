@@ -4,6 +4,7 @@ export default function EditDeleteBoardModal(props) {
       className={`absolute top-0 right-0 z-30 w-screen h-screen select-none cursor-default ${
         props.showEditDeleteBoardModal ? "opacity-100" : "opacity-0"
       } ${props.showEditDeleteBoardModal ? "visible" : "invisible"}`}
+      onClick={() => props.setShowEditDeleteBoardModal(false)}
     >
       <div
         className={`edit-delete-board-modal relative z-40 flex flex-col gap-4 w-[192px] pt-[17px] pb-[17px] pl-[17px] rounded-lg mt-[57px] mr-[23px] mb-0 ml-auto ${
@@ -19,6 +20,7 @@ export default function EditDeleteBoardModal(props) {
         </button>
         <button
           className="text-warning text-[13px] leading-[23px] text-left"
+          onClick={() => props.setShowDeleteBoardModal(true)}
         >
           Delete Board
         </button>
