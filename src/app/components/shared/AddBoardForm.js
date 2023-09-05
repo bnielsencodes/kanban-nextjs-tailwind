@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 import NewColumnsList from "./NewColumnsList";
 
 export default function AddBoardForm(props) {
-  const [newBoardName, setNewBoardName] = useState("");
+  const [columnsList, setColumnsList] = useState([]);
+  const [columnsInput, setColumnsInput] = useState([]);
+  const [newBoard, setNewBoard] = useState({
+    id: props.boardCount + 1,
+    name: "",
+    columns: [],
+  });
 
   function handleRemove(id) {
     const newList = columnsList.filter((item) => item.id !== id);
