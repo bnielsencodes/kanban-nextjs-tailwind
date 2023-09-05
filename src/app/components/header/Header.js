@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeaderLeft from "./HeaderLeft";
 import HeaderRight from "./HeaderRight";
 import EditDeleteBoardModal from "./EditDeleteBoardModal";
+import DeleteBoardModal from "./DeleteBoardModal";
 
 export default function Header(props) {
   const [showEditDeleteBoardModal, setShowEditDeleteBoardModal] =
@@ -28,6 +29,16 @@ export default function Header(props) {
           showEditDeleteBoardModal={showEditDeleteBoardModal}
           setShowEditDeleteBoardModal={setShowEditDeleteBoardModal}
           setShowDeleteBoardModal={props.setShowDeleteBoardModal}
+        />
+      )}
+      {props.showDeleteBoardModal && (
+        <DeleteBoardModal
+          darkMode={props.darkMode}
+          currentBoard={props.currentBoard}
+          currentBoardTitle={props.currentBoardTitle}
+          setShowAddBoardModal={props.setShowAddBoardModal}
+          setShowDeleteBoardModal={props.setShowDeleteBoardModal}
+          handleRemoveBoard={props.handleRemoveBoard}
         />
       )}
     </div>
