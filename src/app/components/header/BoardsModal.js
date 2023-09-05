@@ -10,6 +10,7 @@ export default function BoardsModal(props) {
     >
       <div
         className="absolute top-0 left-0 w-full h-full bg-black/40"
+        onClick={() => props.setShowBoardsModal(false)}
       ></div>
       <div
         className={`boards-modal relative z-40 flex flex-col w-[264px] py-4 pt-[17px] rounded-lg mt-[76px] mx-auto mb-0 ${
