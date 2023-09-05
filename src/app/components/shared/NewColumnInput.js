@@ -25,6 +25,10 @@ export default function NewColumnInput(props) {
         />
         <button
           className="w-[15px] h-[15px] bg-cross bg-center bg-cover bg-no-repeat"
+          onClick={(e) => {
+            e.preventDefault();
+            props.handleRemove(props.item.id);
+          }}
         ></button>
       </li>
     </>

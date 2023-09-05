@@ -16,6 +16,7 @@ export default function AddBoardForm(props) {
         key={item.id}
         item={item}
         darkMode={props.darkMode}
+        handleRemove={handleRemove}
       />
     );
   });
