@@ -10,9 +10,13 @@ export default function AddBoardForm(props) {
   }
 
 
-  const newColumnsElements = newBoardColumns.map((item) => {
+  const newColumnsElements = columnsList.map((item) => {
     return (
-      <NewColumnsList key={item.id} item={item} darkMode={props.darkMode} />
+      <NewColumnInput
+        key={item.id}
+        item={item}
+        darkMode={props.darkMode}
+      />
     );
   });
 
