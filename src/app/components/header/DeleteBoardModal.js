@@ -17,11 +17,15 @@ export default function DeleteBoardModal(props) {
         <div className="flex flex-col gap-4">
           <button
             className={`h-[40px] rounded-[20px] bg-warning text-neutral-800 text-[13px] font-semibold leading-[13px] cursor-pointer`}
+            onClick={() => props.handleRemoveBoard(props.currentBoard.id)}
           >
             Delete
           </button>
           <button
             className="h-[40px] rounded-[20px] bg-neutral-800 text-primary text-[13px] font-semibold leading-[13px] cursor-pointer"
+            onClick={(e) => {
+              props.setShowDeleteBoardModal(false);
+            }}
           >
             Cancel
           </button>
