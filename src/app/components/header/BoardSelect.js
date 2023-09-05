@@ -57,6 +57,7 @@ export default function BoardSelect(props) {
         showBoardsModal={showBoardsModal}
         setShowBoardsModal={setShowBoardsModal}
         setShowAddBoardModal={props.setShowAddBoardModal}
+        setCurrentBoard={props.setCurrentBoard}
         currentBoardTitle={props.currentBoardTitle}
         setCurrentBoardTitle={props.setCurrentBoardTitle}
       />

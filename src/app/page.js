@@ -9,6 +9,7 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [showAddBoardModal, setShowAddBoardModal] = useState(false);
   const [boardCount, setBoardCount] = useState(0);
+  const [currentBoard, setCurrentBoard] = useState(data[0]);
   const [currentBoardTitle, setCurrentBoardTitle] = useState(data[0].name);
 
   useEffect(() => {
@@ -31,6 +32,8 @@ export default function Home() {
       <Header
         darkMode={darkMode}
         toggleTheme={toggleTheme}
+        currentBoard={currentBoard}
+        setCurrentBoard={setCurrentBoard}
         currentBoardTitle={currentBoardTitle}
         setShowAddBoardModal={setShowAddBoardModal}
         setCurrentBoardTitle={setCurrentBoardTitle}

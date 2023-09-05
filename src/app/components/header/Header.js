@@ -12,6 +12,7 @@ export default function Header(props) {
         darkMode={props.darkMode}
         toggleTheme={props.toggleTheme}
         setShowAddBoardModal={props.setShowAddBoardModal}
+        setCurrentBoard={props.setCurrentBoard}
         currentBoardTitle={props.currentBoardTitle}
         setCurrentBoardTitle={props.setCurrentBoardTitle}
       />

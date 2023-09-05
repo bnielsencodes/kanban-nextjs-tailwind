@@ -23,6 +23,7 @@ export default function BoardsModal(props) {
         <AllBoards
           setShowBoardsModal={props.setShowBoardsModal}
           setShowAddBoardModal={props.setShowAddBoardModal}
+          setCurrentBoard={props.setCurrentBoard}
           currentBoardTitle={props.currentBoardTitle}
           setCurrentBoardTitle={props.setCurrentBoardTitle}
         />
